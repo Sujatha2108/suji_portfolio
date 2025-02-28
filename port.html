@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+     body {
+            color: white;
+            margin: 0;
+            background-color: teal;
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            background-color: black;
+            padding: 10px;
+            align-items: center;
+            flex-wrap: wrap;
+            position: relative;
+        }
+
+        .navbar-left img {
+            width: 100px;
+            height: 50px;
+        }
+
+        .navbar-right {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .a-ele {
+            color: white;
+            padding: 10px;
+            text-decoration: none;
+        }
+
+        .a-ele:hover {
+            background-color: teal;
+        }
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .home {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .home-left, .home-right {
+            flex: 1 1 300px;
+            padding: 20px;
+            max-width: 100%;
+        }
+
+        .home-right img {
+            width: 100%;
+            max-width: 350px;
+            height: auto;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .education, .skills, .certificates, .contact {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .education-item, .certificate-item {
+            background-color: teal;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .skills ul {
+            list-style-type: none;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 0;
+        }
+
+        .skills li {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 10px;
+            padding: 10px;
+        }
+
+        .skill-icon {
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+        }
+
+        .certificates-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .certificate-item {
+            width: 200px;
+            height: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+        }
+
+        .contact-info p {
+            margin: 10px 0;
+        }
+
+        .social-media {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            transition: transform 0.3s;
+        }
+
+        .social-icon:hover {
+            transform: scale(1.2);
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .navbar-right {
+                flex-direction: column;
+                gap: 5px;
+                margin-top: 10px;
+                display: none;
+                width: 100%;
+                text-align: center;
+            }
+
+            .navbar-right a {
+                display: block;
+                padding: 10px;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .navbar-right.active {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .home {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .home-right {
+                order: -1;
+            }
+
+            .home-left, .home-right {
+                width: 100%;
+                padding: 10px;
+            }
+
+            .education, .skills, .certificates, .contact {
+                padding: 20px;
+            }
+
+            .skills ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .certificates-container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar-left">
+            <img src="https://ubiquo.io/wp-content/uploads/sites/24/2018/11/creative-agency-home-transparent-portfolio-logo-1.png"
+                alt="" width="100px" height="50px">
+        </div>
+
+        <div class="navbar-right">
+            <a class="a-ele" href="#home">Home</a>
+            <a class="a-ele" href="#education">Education</a>
+            <a class="a-ele" href="#skills">Skills</a>
+            <a class="a-ele" href="#certificates">Certificates</a>
+            <a class="a-ele" href="#contact">Contact</a>
+        </div>
+    </div>
+    <div class="home" id="home">
+        
+        <div class="home-left">
+            <h1>Alugoju Sujatha</h1>
+            <p>Hello! I am sujatha I am studying BTech 3rd year student specializing in Computer Science and
+                Engineering, skilled in programming
+                languages such as Python and Java, with hands-on experience in web development and data analysis. My
+                passion lies in artificial intelligence and machine learning, where I aim to create innovative solutions
+                that address real-world challenges. I am committed to continuous learning and aspire to contribute
+                meaningfully to the tech industry through impactful projects.
+           </p>
+           <a href="https://ik.imagekit.io/ghsfju9gl/sujatha_resume%20(1).pdf?updatedAt=1740749556604" download="Sujatha_Resume.pdf">
+            <button class="resume-button">Download Resume</button>
+        </a>
+        
+
+        </div>
+    <div class="home-right">
+        <!-- Add your image here -->
+        <img src="https://ik.imagekit.io/ghsfju9gl/IMG_20250228_184006.jpg?updatedAt=1740748302753" alt="Sujatha's Image" width="500" height="500">
+    </div>
+    </div>
+    <div style="background-color: black;">
+    <section class="education" id="education">
+        <h2>Education</h2>
+        <div class="education-item">
+            <h3>Bachelor of Technology (BTech) in Computer Science and Engineering</h3>
+            <p><strong>Institution:</strong>SASI INSTITUTE OF TECHNOLOGY AND ENGINEERING</p>
+            <p><strong>Year:</strong> 2022 - present</p>
+            <p><strong>location:</strong> Tadepalligudem</p>
+            <p><strong>CGPA:</strong> 8.8 (Current)</p>
+        </div>
+        <div class="education-item">
+            <h3>Intermediate</h3>
+            <p><strong>Institution:</strong>SRI CHAITHANYA JUNIOR COLLEGE</p>
+            <p><strong>Year:</strong> 2020-2022</p>
+            <p><strong>location:</strong> Tadepalligudem</p>
+            <p><strong>grade:</strong>93% </p>
+        </div>
+        <div class="education-item">
+            <h3>High School</h3>
+            <p><strong>Institution:</strong> Z.P.High school</p>
+            <p><strong>Year:</strong>2019-2020 </p>
+            <p><strong>location:</strong>Alampuram</p>
+            <p><strong>Grade:</strong> 96%</p>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>
+    
+                <img src="https://w0.peakpx.com/wallpaper/266/297/HD-wallpaper-python-logo-python-code-computer-programming-logo.jpg" alt="Python" class="skill-icon">
+                <p class="skill-name">Python</p> 
+            </li>
+
+            <li>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQ2V1BXrzz5GGZjetFH3VxDYFLUizU8WwAtw&s" alt="Java" class="skill-icon">
+                <p class="skill-name">Java</p> 
+            </li>
+            <li>
+                <img src="https://ik.imagekit.io/ghsfju9gl/html.jpg?updatedAt=1733998809054" alt="HTML" class="skill-icon">
+                <p class="skill-name">HTML</p> 
+            </li>
+            <li>
+                <img src="https://ik.imagekit.io/ghsfju9gl/mongodb.jpg?updatedAt=1733999973232" alt="MongoDB" class="skill-icon">
+                <p class="skill-name">MongoDB</p>
+            </li>
+           
+        </ul>
+    </section>
+    
+    <!-- Certificates Section -->
+    <section class="certificates" id="certificates">
+        <h2>Certificates</h2>
+        <div class="certificates-container">
+            <!-- Certificate 1 -->
+            <div class="certificate-item">
+                <h3>Aiml Virtual Intenship</h3>
+                <p><strong>Institution:</strong> eduskills</p>
+                <p><strong>Completion Date:</strong> March 2024</p>
+                <a href="https://ik.imagekit.io/ghsfju9gl/aiml.jpg?updatedAt=1733993749399" target="_blank">View Certificate</a>
+            </div>
+            <!-- Certificate 2 -->
+            <div class="certificate-item">
+                <h3>android Development</h3>
+                <p><strong>Institution:</strong> eduskills</p>
+                <p><strong>Completion Date:</strong> June 2024</p>
+                <a href="https://ik.imagekit.io/ghsfju9gl/android.jpg?updatedAt=1733993725637" target="_blank">View Certificate</a>
+            </div>
+            <!-- Certificate 3 -->
+            <div class="certificate-item">
+                <h3>MongoDB</h3>
+                <p><strong>Institution:</strong>Infosys Springboard</p>
+                <p><strong>Completion Date:</strong> Aug 2024</p>
+                <a href="https://ik.imagekit.io/ghsfju9gl/mongodb.jpg?updatedAt=1733995363466" target="_blank">View Certificate</a>
+            </div>
+            <!-- Certificate 4 -->
+            <div class="certificate-item">
+                <h3>Introduction to SQL</h3>
+                <p><strong>Institution:</strong>SkillUp</p>
+                <p><strong>Completion Date:</strong> Apr 2024</p>
+                <a href="https://ik.imagekit.io/ghsfju9gl/sql.jpg?updatedAt=1733995876132" target="_blank">View Certificate</a>
+            </div>
+        </div>
+    </section>
+    </div>
+    <section class="contact" id="contact">
+        <h2>Contact</h2>
+        <div class="contact-info">
+            <p><strong>Name:</strong> Alugoju Sujatha</p>
+            <p><strong>Phone:</strong> +91 8019145349</p>
+            <p><strong>Email:</strong> sujatha.alugoju@sasi.ac.in</p>
+        </div>
+        <div class="social-media">
+            <a href="https://www.linkedin.com/in/sujatha-alugoju-3a05b2280/" target="_blank">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrIbiofxGclX20CWBDtpmjOcbbuqEJS6PrSQ&s" alt="LinkedIn" class="social-icon">
+            </a>
+            <a href="https://github.com/Sujatha2108"target=_blank>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmrGmeBv3SOLSKz6OlTVlVYkfH9_W3BBgdrA&s" alt="GitHub" class="social-icon">
+            </a>
+            <a href="https://www.instagram.com/your-profile" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/1024px-Instagram_icon.png" alt="Instagram" class="social-icon">
+            </a>
+        </div>
+    </section>
+    
+    
+
+</html>
